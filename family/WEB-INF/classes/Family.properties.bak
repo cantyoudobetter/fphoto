@@ -1,0 +1,6 @@
+DBSERVER = 127.0.0.1
+DBNAME = MDB
+DBUSER = family
+DBPASSWORD = 
+DBPORT = 3306
+PHOTODIR = /tomcat/webapps/family/photo/

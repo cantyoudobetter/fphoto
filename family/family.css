@@ -1,0 +1,28 @@
+/*File: ex1.css
+Created By: Seamus P. H. Leahy
+
+This is the stylesheet for  example 1 for the Horizontal Menu Bar.
+*/
+
+#nav ul{
+	padding : 3px;
+	margin : 0;
+	white-space : nowrap;
+	background-color : #003399;
+	color : White;
+}
+#nav ul li{
+	display : inline;
+}
+#nav ul li a{
+	padding-left : 1em;
+	padding-right : 1em;
+	background-color : #0066CC;
+	color : White;
+	font-weight : bold;
+	text-decoration : none;
+}
+#nav ul li a:hover{
+	background-color : #99CCFF;
+	color : #000066;
+}

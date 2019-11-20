@@ -1,0 +1,67 @@
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 0px;
+margin-top: 0px;
+padding:0px;
+text-align:left;
+font-weight:normal;
+font-size:2;
+}
+</style>
+
+<html><head><title>Photo Center</title>
+</head><body bgcolor=#ffffff text=#000000 link=#000000 vlink=#000000 alink=#000000 onLoad="processPageLoad()">
+<font face="Arial" size=2>
+<table border="0" width="700" cellspacing=0 cellpadding=0 height="21">
+  <tr>
+    <td width="700" height="21">
+        <table border="0" width="700" cellspacing="0" cellpadding="0" height="10">
+            <tr>
+                <td width="400" height="4"><b><font face="Arial" size="5"><%=pageTitle%></font><font face="Arial"><%=userName%></font></b></td>
+            <%if (scroller) {%>
+            <td width="300" height="1">
+                <APPLET CODE="vscroller.class"
+                WIDTH=300 HEIGHT=45><br>
+                <Param Name=NumberMsg Value="1">
+                <Param Name=Msg0 Value=<%=familyMain.getMessageOfTheDay()%>>
+                <Param Name=Colour Value="black">
+                <Param Name=Bg Value="ffffff">
+                <param name=Font              value=helvetica>
+                <param name=Style             value=plain>
+                <param name=Points            value=14>
+                <Param Name=TimeMs Value=120>
+                <Param Name=Offset Value=6>
+                You don't have java! Why don't you get: <a href="http://www.microsoft.com/ie">Microsoft Explorer</a>
+                </APPLET>
+
+
+            </td>
+            <%}%>
+            </tr>
+
+        </table>
+        <table border="0" width="700" cellspacing="0" cellpadding="0" height="10">
+            <tr>
+                <td width="600" height="10">
+                    <table border=0 cellspacing=0 cellpadding=0 height="1">
+                        <tr>
+                        <%for (int i=0; i<menuList.size(); i++) {%>
+                            <td width=15 height="1">&nbsp;</td>
+                            <td bgcolor=#99CCFF align=center width=120 nowrap bordercolor="#FFFFFF" height="1">
+                                <a href="<%=linkList.get(i).toString()%>"><font size="-1" face="Arial"><%=menuList.get(i).toString()%></font></a>
+                            </td>
+                        <%}%>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="700" colspan="2" height="1" bgcolor="#3366CC">
+                    &nbsp;<font color="#FFFFFF" face="Arial" size="2"><%=helpText%></font>
+                </td>
+            </tr>
+        </table>
+    </td>
+  </tr>
+</table>
